@@ -8,10 +8,10 @@
 import Foundation
 
 struct ModelData {
-    static func chargement<T: Decodable>(_ nomFichier: String) -> T {
+    static func chargement<T: Decodable>(_ nomFichier: String, bundle: Bundle = .main) -> T {
         let data: Data
         
-        guard let file = Bundle.main.url(forResource: nomFichier, withExtension: nil)
+        guard let file = bundle.url(forResource: nomFichier, withExtension: nil)
         else {
             fatalError("Impossible de trouver \(nomFichier) dans le main bundle.")
         }

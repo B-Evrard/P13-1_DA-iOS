@@ -20,6 +20,10 @@
 		422740F92C3ED02400E7522C /* Source.json in Resources */ = {isa = PBXBuildFile; fileRef = 422740F82C3ED02400E7522C /* Source.json */; };
 		422740FB2C3ED0EE00E7522C /* DetailClientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422740FA2C3ED0EE00E7522C /* DetailClientView.swift */; };
 		422740FD2C3ED18D00E7522C /* AjoutClientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422740FC2C3ED18D00E7522C /* AjoutClientView.swift */; };
+		FE1BE2662D8077C10070C62C /* DateExtensionTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1BE2652D8077C10070C62C /* DateExtensionTest.swift */; };
+		FE1BE2682D807E210070C62C /* ModelDataTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1BE2672D807E210070C62C /* ModelDataTest.swift */; };
+		FE1BE2E52D8080400070C62C /* SourceTest.json in Resources */ = {isa = PBXBuildFile; fileRef = FE1BE2E42D8080400070C62C /* SourceTest.json */; };
+		FE1BE2E62D8080A50070C62C /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422740F62C3ECFD600E7522C /* ModelData.swift */; };
 		FE9393142D8032E1008C7D53 /* ClientTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9393132D8032E1008C7D53 /* ClientTest.swift */; };
 		FE9393152D803373008C7D53 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422740EC2C3ECCF900E7522C /* Model.swift */; };
 		FE9393162D803969008C7D53 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422740EE2C3ECD1500E7522C /* DateExtension.swift */; };
@@ -59,6 +63,9 @@
 		422740F82C3ED02400E7522C /* Source.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Source.json; sourceTree = "<group>"; };
 		422740FA2C3ED0EE00E7522C /* DetailClientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailClientView.swift; sourceTree = "<group>"; };
 		422740FC2C3ED18D00E7522C /* AjoutClientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AjoutClientView.swift; sourceTree = "<group>"; };
+		FE1BE2652D8077C10070C62C /* DateExtensionTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensionTest.swift; sourceTree = "<group>"; };
+		FE1BE2672D807E210070C62C /* ModelDataTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelDataTest.swift; sourceTree = "<group>"; };
+		FE1BE2E42D8080400070C62C /* SourceTest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SourceTest.json; sourceTree = "<group>"; };
 		FE9393132D8032E1008C7D53 /* ClientTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -135,8 +142,11 @@
 		422740802C3BF4DD00E7522C /* RelayanceTests */ = {
 			isa = PBXGroup;
 			children = (
+				FE1BE2E42D8080400070C62C /* SourceTest.json */,
 				422740812C3BF4DD00E7522C /* RelayanceTests.swift */,
 				FE9393132D8032E1008C7D53 /* ClientTest.swift */,
+				FE1BE2652D8077C10070C62C /* DateExtensionTest.swift */,
+				FE1BE2672D807E210070C62C /* ModelDataTest.swift */,
 			);
 			path = RelayanceTests;
 			sourceTree = "<group>";
@@ -264,6 +274,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE1BE2E52D8080400070C62C /* SourceTest.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,7 +309,10 @@
 				FE9393152D803373008C7D53 /* Model.swift in Sources */,
 				FE9393162D803969008C7D53 /* DateExtension.swift in Sources */,
 				FE9393142D8032E1008C7D53 /* ClientTest.swift in Sources */,
+				FE1BE2662D8077C10070C62C /* DateExtensionTest.swift in Sources */,
 				422740822C3BF4DD00E7522C /* RelayanceTests.swift in Sources */,
+				FE1BE2682D807E210070C62C /* ModelDataTest.swift in Sources */,
+				FE1BE2E62D8080A50070C62C /* ModelData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -510,7 +524,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6FH7WNJPHQ;
+				DEVELOPMENT_TEAM = C3825553HQ;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				MARKETING_VERSION = 1.0;
@@ -529,7 +543,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6FH7WNJPHQ;
+				DEVELOPMENT_TEAM = C3825553HQ;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				MARKETING_VERSION = 1.0;
@@ -547,7 +561,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6FH7WNJPHQ;
+				DEVELOPMENT_TEAM = C3825553HQ;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.amandinecousin.RelayanceUITests;
@@ -564,7 +578,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 6FH7WNJPHQ;
+				DEVELOPMENT_TEAM = C3825553HQ;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.amandinecousin.RelayanceUITests;
