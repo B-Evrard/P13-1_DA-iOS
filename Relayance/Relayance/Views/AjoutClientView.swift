@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct AjoutClientView: View {
+    @ObservedObject var viewModel: RelayanceViewModel
     @Binding var dismissModal: Bool
     @State var nom: String = ""
     @State var email: String = ""
@@ -24,8 +25,12 @@ struct AjoutClientView: View {
             TextField("Email", text: $email)
                 .font(.title2)
             Button("Ajouter") {
-                //Ajout d'un client
-                dismissModal.toggle()
+                viewModel.addClient(nom: nom, email: email)
+                if (!viewModel.showAlert)
+                {
+                    dismissModal.toggle()
+                }
+                
             }
             .padding(.horizontal, 50)
             .padding(.vertical)
@@ -35,11 +40,17 @@ struct AjoutClientView: View {
             .foregroundStyle(.white)
             .padding(.top, 50)
             Spacer()
+            Text(viewModel.messageAlert)
+                .transition(.move(edge: .top))
+                .foregroundColor(.red)
+            Spacer()
+            
         }
         .padding()
     }
 }
 
 #Preview {
-    AjoutClientView(dismissModal: .constant(false))
+    let viewModel = RelayanceViewModel()
+    AjoutClientView(viewModel: viewModel, dismissModal: .constant(false))
 }
