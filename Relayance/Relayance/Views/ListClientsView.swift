@@ -8,14 +8,16 @@
 import SwiftUI
 
 struct ListClientsView: View {
-    @State var clientsList: [Client] = ModelData.chargement("Source.json")
+    @ObservedObject var viewModel: RelayanceViewModel
     @State private var showModal: Bool = false
     
     var body: some View {
         NavigationStack {
-            List(clientsList, id: \.self) { client in
+            List(viewModel.clientsList, id: \.self) { client in
                 NavigationLink {
-                    DetailClientView(client: client)
+                    DetailClientView(client: client, onDelete: {
+                        viewModel.deleteClient(client: client)
+                    })
                 } label: {
                     Text(client.nom)
                         .font(.title3)
@@ -36,9 +38,9 @@ struct ListClientsView: View {
             })
         }
     }
-
+       
 }
 
 #Preview {
-    ListClientsView()
+    ListClientsView(viewModel: RelayanceViewModel())
 }
