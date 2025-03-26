@@ -23,12 +23,21 @@ class RelayanceViewModel: ObservableObject {
         }
     }
     
+    var sourceJson: String = "Source.json"
+    var bundle: Bundle = .main
+    
     init() {
         fetchClients()
     }
     
+    init (sourceJson: String, bundle: Bundle) {
+        self.sourceJson = sourceJson
+        self.bundle = bundle
+        fetchClients()
+    }
+    
     func fetchClients() {
-        clientsList = ModelData.chargement("Source.json")
+        clientsList = ModelData.chargement(sourceJson,bundle: bundle)
     }
     
     func addClient(nom: String, email: String) {

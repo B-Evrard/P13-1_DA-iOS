@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct ListClientsView: View {
-    @ObservedObject var viewModel: RelayanceViewModel
+    
+    @StateObject private var viewModel = RelayanceViewModel()
     @State private var showModal: Bool = false
     
     var body: some View {
@@ -42,5 +43,5 @@ struct ListClientsView: View {
 }
 
 #Preview {
-    ListClientsView(viewModel: RelayanceViewModel())
+    ListClientsView()
 }

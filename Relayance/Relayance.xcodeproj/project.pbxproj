@@ -20,6 +20,7 @@
 		FE1BE2682D807E210070C62C /* ModelDataTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE1BE2672D807E210070C62C /* ModelDataTest.swift */; };
 		FE1BE2E52D8080400070C62C /* SourceTest.json in Resources */ = {isa = PBXBuildFile; fileRef = FE1BE2E42D8080400070C62C /* SourceTest.json */; };
 		FE1BE2E62D8080A50070C62C /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422740F62C3ECFD600E7522C /* ModelData.swift */; };
+		FE42B2792D940817001542C0 /* RelayanceViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE42B2782D940817001542C0 /* RelayanceViewModelTest.swift */; };
 		FE9393142D8032E1008C7D53 /* ClientTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9393132D8032E1008C7D53 /* ClientTest.swift */; };
 		FE9393162D803969008C7D53 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422740EE2C3ECD1500E7522C /* DateExtension.swift */; };
 /* End PBXBuildFile section */
@@ -57,6 +58,7 @@
 		FE1BE2652D8077C10070C62C /* DateExtensionTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensionTest.swift; sourceTree = "<group>"; };
 		FE1BE2672D807E210070C62C /* ModelDataTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelDataTest.swift; sourceTree = "<group>"; };
 		FE1BE2E42D8080400070C62C /* SourceTest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SourceTest.json; sourceTree = "<group>"; };
+		FE42B2782D940817001542C0 /* RelayanceViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelayanceViewModelTest.swift; sourceTree = "<group>"; };
 		FE9393132D8032E1008C7D53 /* ClientTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -68,12 +70,19 @@
 			);
 			target = 4227407C2C3BF4DD00E7522C /* RelayanceTests */;
 		};
+		FE42B27B2D940AD1001542C0 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				RelayanceViewModel.swift,
+			);
+			target = 4227407C2C3BF4DD00E7522C /* RelayanceTests */;
+		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		FE03D5522D92FBB600204E68 /* Models */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (FE03D5EA2D92FBEA00204E68 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Models; sourceTree = "<group>"; };
 		FE03D5EB2D92FC0000204E68 /* Views */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Views; sourceTree = "<group>"; };
-		FE03D5EC2D92FC3D00204E68 /* ViewModels */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = ViewModels; sourceTree = "<group>"; };
+		FE03D5EC2D92FC3D00204E68 /* ViewModels */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (FE42B27B2D940AD1001542C0 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = ViewModels; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +162,7 @@
 				FE9393132D8032E1008C7D53 /* ClientTest.swift */,
 				FE1BE2652D8077C10070C62C /* DateExtensionTest.swift */,
 				FE1BE2672D807E210070C62C /* ModelDataTest.swift */,
+				FE42B2782D940817001542C0 /* RelayanceViewModelTest.swift */,
 			);
 			path = RelayanceTests;
 			sourceTree = "<group>";
@@ -319,6 +329,7 @@
 				422740822C3BF4DD00E7522C /* RelayanceTests.swift in Sources */,
 				FE1BE2682D807E210070C62C /* ModelDataTest.swift in Sources */,
 				FE1BE2E62D8080A50070C62C /* ModelData.swift in Sources */,
+				FE42B2792D940817001542C0 /* RelayanceViewModelTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
