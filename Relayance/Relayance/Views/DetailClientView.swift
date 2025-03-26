@@ -9,7 +9,8 @@ import SwiftUI
 
 struct DetailClientView: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-    var client: Client
+    @ObservedObject var viewModel: RelayanceViewModel
+   
     
     var body: some View {
         VStack {
@@ -19,12 +20,12 @@ struct DetailClientView: View {
                 .foregroundStyle(.orange)
                 .padding(50)
             Spacer()
-            Text(client.nom)
+            Text(viewModel.selectedClient?.nom ?? "")
                 .font(.title)
                 .padding()
-            Text(client.email)
+            Text(viewModel.selectedClient?.email ?? "")
                 .font(.title3)
-            Text(client.formatDateVersString())
+            Text(viewModel.selectedClient?.formatDateVersString() ?? "")
                 .font(.title3)
             Spacer()
         }
@@ -42,5 +43,11 @@ struct DetailClientView: View {
 }
 
 #Preview {
-    DetailClientView(client: Client(nom: "Tata", email: "tata@email", dateCreationString: "20:32 Wed, 30 Oct 2019"))
+    let selectedClient = Client(
+        nom: "Tata",
+        email: "tata@email",
+        dateCreationString: "20:32 Wed, 30 Oct 2019"
+    )
+    let viewModel = RelayanceViewModel(selectedClient: selectedClient)
+    DetailClientView(viewModel: viewModel)
 }
